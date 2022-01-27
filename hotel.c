@@ -18,7 +18,7 @@ struct order
     struct order *next1;
 } * header1;
 
-//function to generate the bill and desplay it on the screen
+//function to generate the bill and display it on the screen
 void generate_bill(struct order *header1)
 {
     struct order *temp = header1;
@@ -49,7 +49,7 @@ void generate_bill(struct order *header1)
             i++;
         }
         printf("--------------------------------------------\n");
-        printf("                           TOTAL : %d\n", Total);
+        printf("                           TOTAL : %d/-\n", Total);
         printf("--------------------------------------------\n");
     }
 }
@@ -192,7 +192,7 @@ struct node *delete_dish(struct node *header)
                     ptr->prev->next = NULL;
                     //free(ptr);
                 }
-                //dis[play]
+                //display
             }
             else if (ptr == header)
             {
@@ -207,7 +207,7 @@ struct node *delete_dish(struct node *header)
                 //free(ptr);
             }
             printf("\n           *.Menu Updated.*           \n");
-            //display_menu(header);
+            display_menu(header);
         }
     }
     return header;
@@ -216,7 +216,6 @@ struct node *delete_dish(struct node *header)
 struct node *Modify(struct node *header)
 {
     struct node *ptr = header;
-    char temp[50];
     int k, i = 1, nprice;
     if (ptr == NULL)
     {
@@ -262,11 +261,9 @@ struct order *searchNode(struct node *header, struct order *header1, int num)
     {
         if (i == num)
         {
-            printf("Enter the quantity of dish %d : ", num);
+            printf("Enter the quantity(in no.s) of dish %d : ", num);
             scanf("%d", &Qty);
-
             strcpy(new1->dish_name, ptr->dish_name);
-
             new1->price = (ptr->price) * Qty;
             new1->qty = Qty;
             flag = 1;
