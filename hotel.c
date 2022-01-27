@@ -352,7 +352,7 @@ struct node *admin(struct node *header)
     int option, flag = 0;
     while (flag == 0)
     {
-        printf("\nChoose an option:\n1.Display menu\n2.Add new item\n3.Delete dish\n4.Modify price of dish\n5.logout\nOption:");
+        printf("\nChoose an option:\n1.Display menu\n2.Add new item\n3.Delete dish\n4.Modify price of dish\n5.logout\nOption: ");
         scanf("%d", &option);
         switch (option)
         {
@@ -385,7 +385,7 @@ struct order *customer(struct node *header, struct order *header1)
     int option, flag = 0;
     while (flag == 0)
     {
-        printf("\nChoose an option:\n1.Display menu\n2.Place order.\n3.Generate bill\n4.Logout\nOption:");
+        printf("\nChoose an option:\n1.Display menu\n2.Place order.\n3.Generate bill\n4.Logout\nOption: ");
         scanf("%d", &option);
         switch (option)
         {
